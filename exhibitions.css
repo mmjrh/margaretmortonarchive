@@ -14,11 +14,6 @@
   }
 
   @font-face {
-      font-family: 'Joan';
-      src: url('fonts/Joan/Joan-Regular.ttf') format('truetype');
-  }
-
-  @font-face {
       font-family: 'GeneralSans-Regular';
       src: url('fonts/GeneralSans/GeneralSans-Regular.woff2') format('woff2'),
            url('fonts/GeneralSans/GeneralSans-Regular.woff') format('woff');
@@ -176,8 +171,6 @@
       cursor: pointer;
   }
 
-
-
 /*other general*/
   .homebutton{
     display: flex;
@@ -230,19 +223,30 @@
       }
   }
 
-  h2{ /*book title on book page*/
+
+/*books and exhibitions*/
+  .maincontent { /*outermost container*/
+    display: flex;
+    padding: 10vh 26vw;
+    flex-direction: column;
+    gap: 2vh; /*between years*/
+  }
+
+  .contentrow{ /*each row*/
+    display: flex;
+    align-items: flex-start; /*aligns text to top of each adjacent image*/
+    gap: 3vw; /*horizontal gap betw year and show title*/
+  }
+
+  .contentrow h2{ /*book title on book page*/
     color: var(--lighttext-color);
     font-family: CormorantGaramond;
     font-size: 1.3rem;
     font-weight: 450;
     margin:0;
   }
-
-  h2 a:visited{
-    color: var(--lighttext-color);
-  }
-
-  h3{ /*publisher/year on book page*/
+  
+  .contentrow h3{ /*publisher/year on book page*/
     color: var(--lighttext-color);
     font-family: CormorantGaramond;
     font-size: 1rem;
@@ -250,39 +254,23 @@
     margin: 0;
   }
 
-  h4{ /*img gallery captions*/
+  .contentrow h4{ /*img gallery captions*/
     color: var(--mediumtext-color);
     font-family: CormorantGaramond;
     font-size: .9rem;
     font-weight: 200;
     margin: 0;
-    align-self: flex-start;
-    padding-bottom:3vh;
   }
 
-  p { /*book description*/
+  .contentrow p { /*book description*/
     font-family: IBMPlexSans;
     color: var(--mediumtext-color);
     font-size: .85rem;
     font-weight: 100;
+    margin:0;
   }
 
-
-/*books and exhibitions*/
-  .maincontent { /*outermost container*/
-    display: flex;
-    padding: 10vh 25vw;
-    flex-direction: column;
-    gap: 5vh;
-  }
-
-  .contentrow{ /*each row*/
-    display: flex;
-    align-items: flex-start; /*aligns text to top of each adjacent image*/
-    gap: 3vw;
-  }
-
-  .leftcolumn {
+  .leftcolumn{
     min-width: 10vw;  /* or whatever feels right */
     flex-shrink: 0;
     justify-items: flex-end;
@@ -300,6 +288,11 @@
     max-width:40vw;
   }
 
+  .exhentry {
+    padding:0 0 1.5vh 0;
+    gap:0;
+  }
+
   @media (max-width: 479px) {
     .maincontent {
       padding: 5vh 2vw;
@@ -307,14 +300,18 @@
     }
     .contentrow {
       display: grid;                    /* change from flex */
-      grid-template-columns: repeat(5, 1fr); /* 5 equal columns, split 2/5 + 3/5 */
+      grid-template-columns: repeat(8, 1fr); /* 5 equal columns, split 2/5 + 3/5 */
       flex-direction: column;
       gap: 3vw;
+      row-gap:5vh;
     }
+
     .leftcolumn{
       display: flex;
       justify-content: flex-end;
-      grid-column: span 2;
+      grid-column: 1/2;
+      max-width: 33vw;
+      padding: 0;
     }
     .leftcolumn img { 
       max-width: 33vw;
@@ -322,13 +319,15 @@
     }
     .rightcolumn {
       max-width: 100%;
-      grid-column: span 3;
+      grid-column: span 7;
+      gap:1vh;
     }
     .contentrow p{
       display: none;
     }
     .contentrow h2{
       font-size: .9rem;
+      
     }
     .contentrow h3{
       font-size: .75rem;
@@ -556,7 +555,7 @@
     position:absolute;
     top:18px;
     right:18px;
-    color:var(--mediumtext-color);
+    color:var(--background-color);
     font-size:2rem;
     border:none;
     background:transparent;
@@ -567,7 +566,7 @@
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    color:#fff;
+    color:var(--background-color);
     background:transparent;
     border:none;
     font-size:3rem;

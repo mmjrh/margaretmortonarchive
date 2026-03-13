@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="exhibitions.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
@@ -36,53 +36,55 @@
         <a class="naventry" href="mma-news.html">News</a>
     </div>
     <!-- books-->
-    <section>
+    <section class="exhibitions">
       <div class="maincontent">
-        <div class="contentrow-exh"><!--2025 Row-->
-          <div class="leftcolumn-exh"><h2>2025</h2></div>
-          <div class="rightcolumn-exh">
-            <h2 class="exhibit-toggle"><a href="javascript:void(0)">Through Padlocks, Behind Barricades:<br>Margaret Morton's Glass House & the Squats of the Lower East Side</a>
-              <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
-                <span class="toggle-arrow">▼</span>
-              </button>
-            </h2>
-            <h3>Interference Archive (Brooklyn, NY)<br>October 18 - January 08 (2026)</h3>
-            <!-- Expandable panel -->
-              <div class="exhibit-panel">
-                <div class="exhibit-panel-content">
-                  <div class="exhibit-panel-left">
-                    <img src="images/exhibitions/2025_TPBBPoster.png" alt="Exhibition image 1">
-                    <img src="images/exhibitions/2025_TPBBZine01.png" alt="Exhibition image 1">
-                    <img src="images/exhibitions/2025_TPBBZine02.png" alt="Exhibition image 1">
-                    <img src="images/exhibitions/2025_TPBBZine03.png" alt="Exhibition image 1">
-                    <img src="images/exhibitions/2025_TPBBZine04.png" alt="Exhibition image 1">
-                    <img src="images/exhibitions/2025_TPBBZine05.png" alt="Exhibition image 1">
-                  </div>
-                  <div class="exhibit-panel-right">
-                    <p>Through Padlocks, Behind Barricades explores the squatter 
-                      movement on New York’s Lower East Side (Loisaida) in the 1990s.
-                      It features Margaret Morton’s photographs of life in Glass House, 
-                      an abandoned glass factory at the corner of Avenue D and East 10th Street. 
-                      Several dozen squatters made the building their home for sixteen months, 
-                      until police evicted them in winter 1994. The exhibition presents Morton’s 
-                      in-depth portrait of one squat, with an array of printed materials exploring
-                      the debates that arose over squatters’ rights. Interference Archive worked 
-                      in partnership with the Margaret Morton Archive to produce the exhibition, 
-                      an accompanying zine, two panel discussions and a film screening. </p>
+        <div class="contentrow"><!--2025 Row-->
+          <div class="leftcolumn"><h2>2025</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"> <!--firstexh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Through Padlocks, Behind Barricades:<br>Margaret Morton's Glass House & the Squats of the Lower East Side</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button>
+              </h2>
+              <h3>Interference Archive (Brooklyn, NY)<br>October 18 - January 08 (2026)</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left">
+                      <img src="images/exhibitions/2025_TPBBPoster.png" alt="Exhibition image 1">
+                      <img src="images/exhibitions/2025_TPBBZine01.png" alt="Exhibition image 1">
+                      <img src="images/exhibitions/2025_TPBBZine02.png" alt="Exhibition image 1">
+                      <img src="images/exhibitions/2025_TPBBZine03.png" alt="Exhibition image 1">
+                      <img src="images/exhibitions/2025_TPBBZine04.png" alt="Exhibition image 1">
+                      <img src="images/exhibitions/2025_TPBBZine05.png" alt="Exhibition image 1">
+                    </div>
+                    <div class="exhibit-panel-right">
+                      <p>Through Padlocks, Behind Barricades explores the squatter 
+                        movement on New York’s Lower East Side (Loisaida) in the 1990s.
+                        It features Margaret Morton’s photographs of life in Glass House, 
+                        an abandoned glass factory at the corner of Avenue D and East 10th Street. 
+                        Several dozen squatters made the building their home for sixteen months, 
+                        until police evicted them in winter 1994. The exhibition presents Morton’s 
+                        in-depth portrait of one squat, with an array of printed materials exploring
+                        the debates that arose over squatters’ rights. Interference Archive worked 
+                        in partnership with the Margaret Morton Archive to produce the exhibition, 
+                        an accompanying zine, two panel discussions and a film screening. </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+            </div>
           </div>
         </div>
-        <div class="contentrow-exh"><!--2015 Row-->
-          <div class="leftcolumn-exh"><h2>2015</h2></div>
-          <div class="rightcolumn-exh"><!--2015 exhibitions-->
-            <div><!--ensures js query opens the correct dropdown panel-->
-              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Margaret Morton: A Retrospective</a>
+        <div class="contentrow"><!--2015 Row-->
+          <div class="leftcolumn"><h2>2015</h2></div>
+          <div class="rightcolumn"><!--2015 exhibitions-->
+            <div class="exhentry"><!--first exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Margaret Morton: A Retrospective*</a>
                 <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
                   <span class="toggle-arrow">▼</span>
                 </button></h2>
-              <h3>Leica Gallery (New York, NY)<br>June 26 – August 15</h3><br>
+              <h3>Leica Gallery (New York, NY)<br>June 26 – August 15</h3>
               <!-- Expandable panel -->
                 <div class="exhibit-panel">
                   <div class="exhibit-panel-content">
@@ -91,13 +93,12 @@
                   </div>
                 </div>
             </div>
-            <div>
+            <div class="exhentry"><!--second-->
               <h2 class="exhibit-toggle"><a href="">Inside the Farley: Photographs by Margaret Morton*</a>
                 <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
                   <span class="toggle-arrow">▼</span>
                 </button></h2>
                 <h3>Architectural League of New York (New York, NY)<br>xx xx - xx xx<br>See also this <a href="https://urbanomnibus.net/2016/10/excavating-the-farley/">essay</a></h3>
-                <br>
               <!-- Expandable panel -->
                 <div class="exhibit-panel">
                   <div class="exhibit-panel-content">
@@ -110,13 +111,12 @@
                   </div>
                 </div>
             </div>
-
-            <div>
+            <div class="exhentry"><!--third-->
               <h2 class="exhibit-toggle"><a href="">Cities of the Dead: The Ancestral Cemeteries of Kyrgyzstan*</a>
                 <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
                   <span class="toggle-arrow">▼</span>
                 </button></h2>
-                <h3>Ismaili Centre (Toronto, CA)<br>date date date</h3><br>
+                <h3>Ismaili Centre (Toronto, CA)<br>date date date</h3>
               <!-- Expandable panel -->
                 <div class="exhibit-panel">
                   <div class="exhibit-panel-content">
@@ -125,72 +125,214 @@
                   </div>
                 </div>
             </div>
-            
           </div>
         </div>
-        <div class="contentrow-exh"><!--2010 Row-->
-          <div class="leftcolumn-exh"><h2>2010</h2></div>
-          <div class="rightcolumn-exh">
-            <h2><a href="">The Crude and the Rare</a></h2>
-              <h3>41 Cooper Gallery at the Cooper Union (New York, NY)<br>October 19 - November 20</h3><br>
+        <div class="contentrow"><!--2010 Row-->
+          <div class="leftcolumn"><h2>2010</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"><!--first exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">The Crude and the Rare</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
+              <h3>41 Cooper Gallery at the Cooper Union (New York, NY)<br>October 19 - November 20</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
-        <div class="contentrow-exh"><!--2005 Row-->
-          <div class="leftcolumn-exh"><h2>2004</h2></div>
-          <div class="rightcolumn-exh">
-            <h2><a href="">Glass House*</a></h2>
+        <div class="contentrow"><!--2005 Row-->
+          <div class="leftcolumn"><h2>2004</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"><!--first exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Glass House*</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
               <h3>Municipal Art Society, Urban Center Galleries (New York, NY)<br>December 9 – January 20 (2005)</h3>
-
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
           </div> 
         </div>
-        <div class="contentrow-exh"><!--2002 Row-->
-          <div class="leftcolumn-exh"><h2>2002</h2></div>
-          <div class="rightcolumn-exh">
-            <h2><a href="">The Flag</a></h2>
-              <h3>Pasedena Armory for the Arts (Pasadena, CA)<br>date date 2002</h3><br>
-            <h2><a href="book.html">Beggars and Choosers</a></h2>
+        <div class="contentrow"><!--2002 Row-->
+          <div class="leftcolumn"><h2>2002</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"><!--first exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">The Flag</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
+              <h3>Pasedena Armory for the Arts (Pasadena, CA)<br>date date 2002</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
+            <div class="exhentry"><!--sec exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Beggars and Choosers</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
               <h3>Birmingham Civil Rights Institute (Birmingham, AL)<br> date date 2002</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
           </div>   
         </div>
-        <div class="contentrow-exh"><!--2001 Row-->
-          <div class="leftcolumn-exh"><h2>2001</h2></div>
-          <div class="rightcolumn-exh">
-            <h2><a href="">The Tunnel*</a></h2>
+        <div class="contentrow"><!--2001 Row-->
+          <div class="leftcolumn"><h2>2001</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"><!--first exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">The Tunnel*</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
               <h3>Cleveland Center for Contemporary Art (Cleveland, OH)<br>March 9 – May 20</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
           </div>   
         </div>
-        <div class="contentrow-exh"><!--1997 Row-->
-          <div class="leftcolumn-exh"><h2>1997</h2></div>
-          <div class="rightcolumn-exh">
-            <h2><a href="">Evidence: Photography and Site</a></h2>
-              <h3>Wexner Center for the Arts (Columbus, OH)<br>February 1 – April 13</h3><br>
-            <h2><a href="">Unmapping the Earth</a></h2>
-              <h3>Gwangju Biennale (Gwangju, KR)<br>September 1 – November 27</h3><br>
-            <h2><a href="">Gardens of Urban Delight</a></h2>
+        <div class="contentrow"><!--1997 Row-->
+          <div class="leftcolumn"><h2>1997</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"><!--first exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Evidence: Photography and Site</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
+              <h3>Wexner Center for the Arts (Columbus, OH)<br>February 1 – April 13</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
+            <div class="exhentry"><!--sec exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Unmapping the Earth</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
+              <h3>Gwangju Biennale (Gwangju, KR)<br>September 1 – November 27</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
+            <div class="exhentry"><!--third exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Gardens of Urban Delight</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
               <h3>Louis Abrons Art Center (New York, NY)<br>datemissing</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
           </div>   
         </div>
-        <div class="contentrow-exh"><!--1995 Row-->
-          <div class="leftcolumn-exh"><h2>1995</h2></div>
-          <div class="rightcolumn-exh">
-            <h2><a href="">A Century Apart: Images of Struggle & Spirit<br>Jacob Riis and Five Contemporary Photographers</a></h2>
-              <h3>Museum of the City of New York (New York, NY)<br>January 18 – September 3</h3><br>
-            <h2><a href="">Fragile Dwelling*</a></h2>
+        <div class="contentrow"><!--1995 Row-->
+          <div class="leftcolumn"><h2>1995</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"><!--first exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">A Century Apart: Images of Struggle & Spirit<br>Jacob Riis and Five Contemporary Photographers</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
+              <h3>Museum of the City of New York (New York, NY)<br>January 18 – September 3</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
+            <div class="exhentry"><!--sec exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">Fragile Dwelling*</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
               <h3>National Building Museum (Washington, D.C.)<br>June 15 – November 8</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
           </div>   
         </div>
-        <div class="contentrow-exh"><!--1993 Row-->
-          <div class="leftcolumn-exh"><h2>1993</h2></div>
-          <div class="rightcolumn-exh">
-            <h2><a href="">In Transit</a></h2>
+        <div class="contentrow"><!--1993 Row-->
+          <div class="leftcolumn"><h2>1993</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"><!--sec exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">In Transit</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
               <h3>New Museum of Contemporary Art (New York, NY)<br>January 15 – April 11</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
           </div>   
         </div>
-        <div class="contentrow-exh"><!--1990 Row-->
-          <div class="leftcolumn-exh"><h2>1990</h2></div>
-          <div class="rightcolumn-exh">
-            <h2><a href="">The Architecture of Despair: Building Types of the Homeless*</a></h2>
+        <div class="contentrow"><!--1990 Row-->
+          <div class="leftcolumn"><h2>1990</h2></div>
+          <div class="rightcolumn">
+            <div class="exhentry"><!--sec exh-->
+              <h2 class="exhibit-toggle"><a href="javascript:void(0)">The Architecture of Despair: Building Types of the Homeless*</a>
+                <button class="exhibit-toggle-btn" aria-expanded="false" aria-label="Toggle exhibition details">
+                  <span class="toggle-arrow">▼</span>
+                </button></h2>
               <h3>55 Mercer St. Gallery (New York, NY)<br>March 13 – March 31</h3>
+              <!-- Expandable panel -->
+                <div class="exhibit-panel">
+                  <div class="exhibit-panel-content">
+                    <div class="exhibit-panel-left"><img src=""></div>
+                    <div class="exhibit-panel-right"><p></p></div>
+                  </div>
+                </div>
+            </div>
           </div>   
         </div>
       </div>
