@@ -238,6 +238,14 @@
     gap: 3vw; /*horizontal gap betw year and show title*/
   }
 
+  .contentrow h1{
+    color: var(--lighttext-color);
+    font-family: CormorantGaramond;
+    font-size: 1rem;
+    font-weight: 450;
+    margin:0;
+  }
+
   .contentrow h2{ /*book title on book page*/
     color: var(--lighttext-color);
     font-family: CormorantGaramond;
@@ -332,179 +340,6 @@
     .contentrow h3{
       font-size: .75rem;
     }
-  }
-
-/*project-pages*/
-  .gallerycontainer{
-    display: flex;
-    align-items: flex-start;
-    flex: 1;
-    padding-top: 1vh;
-  }
-
-  .bookinfo{
-    display: flex;
-    max-width: 30vw;
-    padding-left: 3vw;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-self: center;
-    gap: 3vh;
-    position: sticky;
-    top: 0;
-  }
-
-  .bookinfo img{
-    display: flex;
-    padding: 0 3vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    align-self: stretch;
-  }
-
-  .booktext{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    align-self: stretch;
-    font-weight: 100;
-  }
-
-  .imgscroll {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    height: 92vh; /* controls how tall the scroll area is */
-    align-items:flex-end;
-    gap: 2vh;
-    flex:1;
-  }
-
-  .imgscroll img{
-    height: auto;
-    align-items: right;
-    max-width: 50vw;
-    padding-right:1vw;
-    box-sizing: border-box;
-  }
-
-  .imgitem{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* keeps the group right-aligned in the scroll container */
-    gap: 0.5vh;
-  }
-
-  @media (max-width: 479px) {
-    .gallerycontainer{
-      flex-direction: column;
-      align-items: center;
-    }
-    .bookinfo{
-      max-width: 90vw;
-      display:flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2vh 0 0 0;
-      position: static; /* disable sticky behavior on mobile */
-    }
-    .bookinfo img{
-      max-width: 90vw;
-      max-height: 65vh;
-      margin:auto;
-      padding: 0;
-    }
-    .bookinfo p{
-      font-size:.8rem;
-    }
-    .imgscroll {
-      max-width: 95vw;
-      height: auto; /* allow it to grow with content */
-      gap:1vh;
-    }
-    .imgscroll img{
-      max-width: 95vw;
-      padding-right:0;
-    }
-  }
-
-/*writings page*/
-  .articleinfo{ /*general description for Writing page*/
-    display: flex;
-    max-width: 16vw;
-    padding: 0 6vw 0 3vw;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top:40%;
-  }
-
-  .articlescroll {/*article grid*/
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    max-width: 60vw;
-    max-height: 95vh; /* controls how tall the scroll area is */
-    gap: 4vh;
-    padding-top:8vh;
-    box-sizing: border-box;
-  }
-  
-  .articlescroll h1{
-    font-family: cormorantgaramond;
-    color: var(--lighttext-color);
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom:.75rem;
-  }
-
-  .articlerow{
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
-    align-items: flex-start;
-  }
-
-  .articlerow img{
-    max-width:13vw;
-    height:auto;
-  }
-
-  @media (max-width: 479px) {
-    .articleinfo{
-      max-width: 90vw;
-      padding: 8vh 0vw;
-      position: static; /* disable sticky behavior on mobile */
-    }
-    .articlescroll {
-      max-width: 95vw;
-      padding-top: 0vh;
-      gap:1vh;
-    }
-    .articlescroll h1{
-      font-size: .9rem;
-      margin-bottom:.25rem;
-    }
-    .articlerow {
-      align-items: flex-start;
-      width:90vw;
-      flex-wrap:wrap;
-      row-gap:2vh
-    }
-    .articlerow img{
-      width:100%;
-      max-width:95vw;
-      height:15vh;
-      object-fit:contain;
-    }
-  }
-
-/*biography*/
-  .portrait img {
-    height: auto;
-    align-self: flex-end;
-    max-width: 30vw;
   }
 
 /*Modal*/
