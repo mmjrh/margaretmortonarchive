@@ -82,7 +82,56 @@
     background: inherit;   /* fills the space above the bar */
   }
 
+  /*other general*/
+  .homebutton{
+    display: flex;
+    align-self: stretch;
+  }
+
+  .pagetitle{
+    color: var(--lighttext-color);
+    font-family: CormorantGaramond;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.03rem;
+  }
+
+  .homepage { /*homepageimg*/
+    padding: 0 3%; /*top-bottom, right-left */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 90vh;    /* ensure mobile view also takes full height */
+  }
+  
+  .landingimg {
+    max-height: 80vh;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    background-color: var(--dimtext-color);
+  }
+
+    /* mobile‑only adjustments for homepage + nav*/
   @media (max-width: 479px) {
+    .navbar { display: none; }    /* hide desktop links */
+    .hamburger { display: block; }/* show the button */
+    .homebutton a {
+      font-size: 1.4rem;
+      align-items:center;
+      padding-left:3vw;
+    }
+    .homepage {
+      min-height: 90vh;    /* ensure mobile view also takes full height */
+    }
+    .landingimg{
+      max-width:90vw;
+      padding:5px;
+    }
     nav {
       padding: 1vh 0 2vh 0;
     }
@@ -105,7 +154,7 @@
     color: var(--mediumtext-color);
     text-align: right;
     font-family: CormorantGaramond;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -176,59 +225,6 @@
       cursor: pointer;
   }
 
-
-
-/*other general*/
-  .homebutton{
-    display: flex;
-    align-self: stretch;
-  }
-
-  .pagetitle{
-    color: var(--lighttext-color);
-    font-family: CormorantGaramond;
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.03rem;
-  }
-
-  .homepage { /*homepageimg*/
-    padding: 0 3%; /*top-bottom, right-left */
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    min-height: 90vh;    /* ensure mobile view also takes full height */
-  }
-  
-  .landingimg {
-    max-height: 80vh;
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding:10px;
-    background-color: var(--dimtext-color);
-  }
-
-    /* mobile‑only adjustments for homepage + nav*/
-  @media (max-width: 479px) {
-      .navbar { display: none; }    /* hide desktop links */
-      .hamburger { display: block; }/* show the button */
-      .homebutton a {
-        font-size: 1.4rem;
-        align-items:center;
-        padding-left:3vw;
-      }
-      .homepage {
-        min-height: 90vh;    /* ensure mobile view also takes full height */
-      }
-      .landingimg{
-        max-width:90vw;
-        padding:5px;
-      }
-  }
 
   h2{ /*book title on book page*/
     color: var(--lighttext-color);

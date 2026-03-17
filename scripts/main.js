@@ -32,6 +32,36 @@ document.addEventListener('DOMContentLoaded', () => {
   ham.addEventListener('click', () => setMenu(true));
   if (closeBtn) closeBtn.addEventListener('click', () => setMenu(false));
 });
+
+/* stack imggrid vertically when it contains ultrawide images */
+document.addEventListener('DOMContentLoaded', () => {
+  const grids = document.querySelectorAll('.imggrid');
+
+  function updateGridLayout(grid) {
+    const images = Array.from(grid.querySelectorAll('img'));
+    const hasUltraWide = images.some((img) => {
+      if (!img.naturalWidth || !img.naturalHeight) return false;
+      return img.naturalWidth / img.naturalHeight > 1.5; // threshold for "ultrawide" can be adjusted
+    });
+
+    grid.classList.toggle('imggrid-stack-vertical', hasUltraWide);
+  }
+
+  grids.forEach((grid) => {
+    const images = Array.from(grid.querySelectorAll('img'));
+    if (!images.length) return;
+
+    images.forEach((img) => {
+      if (img.complete) {
+        updateGridLayout(grid);
+      } else {
+        img.addEventListener('load', () => updateGridLayout(grid), { once: true });
+      }
+    });
+
+    updateGridLayout(grid);
+  });
+});
    
 /*exhibitions modal script*/
     (function(){
@@ -91,13 +121,18 @@ document.addEventListener('DOMContentLoaded', () => {
       prevBtn.addEventListener('click', function(e){ e.stopPropagation(); navigate(-1); });
       nextBtn.addEventListener('click', function(e){ e.stopPropagation(); navigate(1); });
 
-      // Attach click handlers to images, grouping them by their right-column container.
-      // Adjust selector to match your structure; here images live inside each `.contentrow .rightcolumn`.
-      const images = document.querySelectorAll('.contentrow .rightcolumn img, img.exhibit-thumb');
+      // Attach click handlers to entry images.
+      // Grouping is scoped to each entry container, not an entire year/right column.
+      const images = document.querySelectorAll('.articlecontainer img, .exhentry img, img.exhibit-thumb');
       images.forEach(img=>{
         img.classList.add('exhibit-thumb');
         img.addEventListener('click', function(e){
-          const container = img.closest('.rightcolumn') || img.closest('.contentrow') || document;
+          const container =
+            img.closest('.articlecontainer') ||
+            img.closest('.exhentry') ||
+            img.closest('.rightcolumn') ||
+            img.closest('.contentrow') ||
+            document;
           const groupList = Array.from(container.querySelectorAll('img'));
           // Filter out images that should not be in the gallery (optional): here we keep only those in this groupList
           const startIndex = groupList.indexOf(img);

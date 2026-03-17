@@ -106,11 +106,46 @@
     color: var(--mediumtext-color);
     text-align: right;
     font-family: CormorantGaramond;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
   }
+
+  .homebutton{
+    display: flex;
+    align-self: stretch;
+  }
+
+  .pagetitle{
+    color: var(--lighttext-color);
+    font-family: CormorantGaramond;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 520;
+    line-height: normal;
+    letter-spacing: 0.03rem;
+  }
+
+  .homepage { /*homepageimg*/
+    padding: 0 3%; /*top-bottom, right-left */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 90vh;    /* ensure mobile view also takes full height */
+  }
+  
+  .landingimg {
+    max-height: 80vh;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    background-color: var(--dimtext-color);
+  }
+
+
 
 /*mobile menu*/
   .hamburger {
@@ -177,42 +212,6 @@
       cursor: pointer;
   }
 
-
-
-/*other general*/
-  .homebutton{
-    display: flex;
-    align-self: stretch;
-  }
-
-  .pagetitle{
-    color: var(--lighttext-color);
-    font-family: CormorantGaramond;
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.03rem;
-  }
-
-  .homepage { /*homepageimg*/
-    padding: 0 3%; /*top-bottom, right-left */
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    min-height: 90vh;    /* ensure mobile view also takes full height */
-  }
-  
-  .landingimg {
-    max-height: 80vh;
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding:10px;
-    background-color: var(--dimtext-color);
-  }
-
     /* mobile‑only adjustments for homepage + nav*/
   @media (max-width: 479px) {
       .navbar { display: none; }    /* hide desktop links */
@@ -230,6 +229,8 @@
         padding:5px;
       }
   }
+
+
 
   h2{ /*book title on book page*/
     color: var(--lighttext-color);
@@ -296,15 +297,6 @@
     padding-bottom: 0;
   }
 
-  .contentrow h1{
-    color: var(--lighttext-color);
-    font-family: CormorantGaramond;
-    font-size: 1rem;
-    font-weight: 450;
-    margin:0;
-    align-items: center;
-  }
-
   .leftcolumn {
     min-width: 11vw;  /* or whatever feels right */
     flex-shrink: 0;
@@ -332,8 +324,8 @@
     background-color: var(--dimtext-color);
   }
 
-  .contentheader{
-    padding-left:14vw;
+  .rightcolumn p{
+    font-size: 0.9rem;
   }
 
   .rightcolumn p a{
@@ -341,11 +333,14 @@
     background-color: transparent;
   }
 
+  .contentheader{
+    padding-left:14vw;
+  }
 
   .contentheader h1{
     color: var(--lighttext-color);
     font-family: CormorantGaramond;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 450;
     margin:0;
   }
@@ -385,14 +380,20 @@
       max-width: 100%;
       grid-column: span 3;
     }
+    .contentheader h1{
+      font-size: 1.2rem;
+    }
     .contentrow p{
       display: none;
     }
     .contentrow h2{
-      font-size: .9rem;
+      font-size: 1rem;
+      max-width:75%;
+      font-weight:450;
     }
     .contentrow h3{
-      font-size: .75rem;
+      font-size: .85rem;
+      font-weight:350;
     }
   }
 
@@ -405,31 +406,35 @@
   }
 
   .bookinfo{
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
     max-width: 30vw;
+    height: 92vh;
     padding-left: 3vw;
     box-sizing: border-box;
-    flex-direction: column;
     align-self: center;
-    gap: 3vh;
+    gap: 0;
     position: sticky;
     top: 0;
   }
 
   .bookinfo img{
-    display: flex;
-    padding: 0 3vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    align-self: stretch;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1.5vw;
+    margin-top:4vh;
+    box-sizing: border-box;
+    align-self: center;
   }
 
   .booktext{
     display: flex;
     flex-direction: column;
     align-items: left;
-    align-self: stretch;
+    align-self: center;
+    margin: 0;
     font-weight: 100;
   }
 
@@ -465,16 +470,22 @@
     }
     .bookinfo{
       max-width: 90vw;
+      height: auto;
       display:flex;
       flex-direction: column;
       align-items: center;
       padding: 2vh 0 0 0;
       position: static; /* disable sticky behavior on mobile */
     }
+    .booktext{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
     .bookinfo img{
       max-width: 90vw;
       max-height: 65vh;
-      margin:auto;
+      margin-top:0;
+      margin-bottom:3vh;
       padding: 0;
     }
     .bookinfo p{

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css"><!--
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">-->
+    <title>Margaret Morton</title>
+  </head>
+  <body>
+    <!-- nav, desktop+mobile -->
+    <nav>
+      <div class="homebutton">
+        <a class="pagetitle" href="index.html">Margaret Morton</a></div>
+      </div>
+      <div class="navbar">
+        <a class="naventry" href="mma-books.html">Books</a>
+        <a class="naventry" href="mma-writing.html">Writing</a>
+        <a class="naventry" href="mma-exhibitions.html">Exhibitions</a>
+        <a class="naventry" href="mma-biography.html">Biography</a>
+        <a class="naventry" href="mma-archive.html">Archive</a>
+        <a class="naventry" href="mma-news.html">News</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">&times;</button>
+        <a class="naventry" href="mma-books.html">Books</a>
+        <a class="naventry" href="mma-writing.html">Writing</a>
+        <a class="naventry" href="mma-exhibitions.html">Exhibitions</a>
+        <a class="naventry" href="mma-biography.html">Biography</a>
+        <a class="naventry" href="mma-archive.html">Archive</a>
+        <a class="naventry" href="mma-news.html">News</a>
+    </div>
+    <!-- books-->
+      <div class="gallerycontainer">
+        <div class="articleinfo">
+          <div class="booktext">
+            <h2>Selected Writings</h2>
+            <h3>1992-2015</h3>
+            <p>A frequent contributor to discourse on the housing crisis through mainstream publications such as The New York Times, 
+              Morton also published a number of essays in smaller publications. A limited selection of these writings appear here. </p>
+          </div>
+        </div>
+        <div class="articlescroll">
+          <div><!--groups date with images-->
+            <h1>1991</h1>
+            <div class="articlerow"> <!--1991-->
+              <div class="imgitem">
+                <img data-caption="Fleeting Monuments of the Dispossessed on the Lower East Side&#10;The New York Times&#10;1995" src="images/articles/placeholder1.png">
+              </div>
+              <div class="imgitem">
+                <img data-caption="Homes Whose Days, but Not Doors, Were Numbered&#10;The New York Times&#10;2000" src="images/articles/placeholder2.png">
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1>1992</h1>
+            <div class="articlerow"> <!--1992-->
+              <div class="imgitem">
+                <img data-caption="In Death, a Pauper Finds Generosity&#10;The New York Times&#10;2000" src="images/articles/placeholder3.png">
+              </div>
+              <div class="imgitem">
+                <img data-caption="At the End of the Tunnel, a Home&#10;The New York Times&#10;1996" src="images/articles/placeholder4.png">
+              </div>
+              <div class="imgitem">
+                <img data-caption="Homes for the Invisible&#10;The New York Times&#10;1995" src="images/articles/placeholder5.png">
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    <!--modal-->
+      <div id="mm-modal" class="mm-modal" aria-hidden="true" role="dialog">
+        <button class="mm-prev" aria-label="Previous" hidden>‹</button>
+        <button class="mm-next" aria-label="Next" hidden>›</button>
+        <button class="close" aria-label="Close">&times;</button>
+        <div class="mm-image-wrap">
+          <img src="" alt="">
+          <div class="mm-caption" hidden></div>
+        </div>
+      </div>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
