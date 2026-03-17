@@ -274,13 +274,35 @@
     display: flex;
     padding: 10vh 25vw;
     flex-direction: column;
-    gap: 2vh;
+    gap: 1vh; /*space betw page title and first entry*/
   }
 
   .contentrow{ /*each row*/
     display: flex;
     align-items: flex-start; /*aligns text to top of each adjacent image*/
     gap: 3vw;
+  }
+
+  .books .contentrow{
+    align-items: center;
+    margin-bottom: 4vh;
+  }
+
+  .books .contentrow:last-child{
+    margin-bottom: 0;
+  }
+
+  .books .rightcolumn{
+    padding-bottom: 0;
+  }
+
+  .contentrow h1{
+    color: var(--lighttext-color);
+    font-family: CormorantGaramond;
+    font-size: 1rem;
+    font-weight: 450;
+    margin:0;
+    align-items: center;
   }
 
   .leftcolumn {
@@ -333,12 +355,23 @@
       padding: 5vh 2vw;
       gap:2vh;
     }
+
     .contentrow {
       display: grid;                    /* change from flex */
       grid-template-columns: repeat(5, 1fr); /* 5 equal columns, split 2/5 + 3/5 */
       flex-direction: column;
       gap: 3vw;
     }
+
+    .books .contentrow{
+      margin-bottom: 0;
+      align-items: flex-start;
+    }
+
+    .contentheader{
+      padding-left:38vw;
+    }
+
     .leftcolumn{
       display: flex;
       justify-content: flex-end;
@@ -584,7 +617,7 @@
     position:absolute;
     top:18px;
     right:18px;
-    color:var(--mediumtext-color);
+    color:var(--background-color);
     font-size:2rem;
     border:none;
     background:transparent;
@@ -618,8 +651,8 @@
 
   /* place caption below the image, aligned to its bottom left */
   .mm-modal .mm-caption{
-    margin-top: 0;
-    color: var(--mediumtext-color);
+    margin-top: 1vh;
+    color: var(--background-color);
     font-family:cormorantgaramond;
     white-space: pre-line; /* allows for line breaks in the caption text */
     max-width: calc(100vw - 80px);
