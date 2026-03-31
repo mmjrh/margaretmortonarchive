@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <title>Margaret Morton</title>
+  </head>
+  <body>
+    <nav> <!-- nav, desktop+mobile -->
+      <div class="homebutton">
+        <a class="pagetitle" href="index.html">Margaret Morton</a></div>
+      </div>
+      <div class="navbar">
+        <a class="naventry" href="mma-books.html">Books</a>
+        <a class="naventry" href="mma-writing.html">Writing</a>
+        <a class="naventry" href="mma-exhibitions.html">Exhibitions</a>
+        <a class="naventry" href="mma-biography.html">Biography</a>
+        <a class="naventry" href="mma-archive.html">Archive</a>
+        <a class="naventry" href="mma-news.html">News</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">&times;</button>
+        <a class="naventry" href="mma-books.html">Books</a>
+        <a class="naventry" href="mma-writing.html">Writing</a>
+        <a class="naventry" href="mma-exhibitions.html">Exhibitions</a>
+        <a class="naventry" href="mma-biography.html">Biography</a>
+        <a class="naventry" href="mma-archive.html">Archive</a>
+        <a class="naventry" href="mma-news.html">News</a>
+    </div>
+    <!-- books-->
+      <div class="gallerycontainer">
+        <div class="bookinfo">
+          <!--<img src="images/covers/Farley.jpg">-->
+          <div class="booktext">
+            <h2>The Farley</h2>
+            <h3>2012</h3>
+            <p><i>The Farley</i> is a portrait of the 1.4 million square-foot Farley Post Office before a portion of it was gutted and repurposed as Moynihan Train Station, first proposed by Senator Daniel 
+              Patrick Moynihan in 1993. Built in 1914, the Post Office on Eighth Avenue between 31st and 32nd Streets was designed by McKim, Mead, and White, the same architects who built the original Pennsylvania Station, 
+              demolished in 1963. Two years after New York State purchased the building from the USPS in 2007, the Farley ceased its 24-hour postal operations for the first time in nearly a century, 
+              choosing to operate out of other sites around New York City.  
+            </p>
+            <p>Read Morton's essay on The Farley for the Architectural League of New York's <i>Urban Omnibus</i> <a href="https://urbanomnibus.net/2016/10/excavating-the-farley/">here</a>.</p>
+          </div>
+        </div>
+        <div class="imgscroll">
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley01.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley02.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley03.jpeg">
+          </div>  
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley03a.jpg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley04.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley05.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley06.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley07.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley08.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley09.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley10.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley11.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley12.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley13.jpeg">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/Farley/Farley14.jpeg">
+          </div>
+      </div>
+    <!--modal-->
+      <div id="mm-modal" class="mm-modal" aria-hidden="true" role="dialog">
+        <button class="mm-prev" aria-label="Previous" hidden>‹</button>
+        <button class="mm-next" aria-label="Next" hidden>›</button>
+        <button class="close" aria-label="Close">&times;</button>
+        <div class="mm-image-wrap">
+          <img src="" alt="">
+          <div class="mm-caption" hidden></div>
+        </div>
+      </div>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

@@ -45,6 +45,19 @@
     color: var(--lighttext-color);
   }
 
+  p a{
+    text-decoration: underline dashed;
+    text-decoration-thickness: 10%;
+    text-decoration-color: rgba(116, 87, 14, 0.45);
+    color: var(--lighttext-color);
+    text-decoration-inset: 1rem 1rem;
+    text-decoration-skip-ink: none;
+  }
+
+  .indentp{
+    padding-left: 1.5rem;
+  }
+
   body{
     overflow-x: hidden;
   }
@@ -412,8 +425,10 @@
     .contentrow p{
       font-size:0.75rem;
       text-align: justify;
-      padding:.75rem 1rem 0 1rem;
-      text-indent: 2rem;
+      padding:.75rem .5rem 0 .5rem;
+    }
+    .indentp{
+      padding-left: 1rem !important;
     }
     .contentrow h1{
       font-size: 1.2rem;
@@ -608,7 +623,7 @@
     opacity:1;
   }
 
-  .exhibit-panel-content{
+  .exhibit-panel-content{ /*text dropdown styling*/
     display:flex;
     gap:2vw;
     padding-top:2vh;
@@ -619,8 +634,9 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width:30vw;
-    padding-right:3vw;
+    row-gap:0;
     margin-left:0;
+    padding-right:3vw;
   }
 
   .exhibit-panel-left img{

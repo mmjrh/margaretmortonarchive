@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+    <title>Margaret Morton</title>
+  </head>
+  <body>
+    <nav> <!-- nav, desktop+mobile -->
+      <div class="homebutton">
+        <a class="pagetitle" href="index.html">Margaret Morton</a></div>
+      </div>
+      <div class="navbar">
+        <a class="naventry" href="mma-books.html">Books</a>
+        <a class="naventry" href="mma-writing.html">Writing</a>
+        <a class="naventry" href="mma-exhibitions.html">Exhibitions</a>
+        <a class="naventry" href="mma-biography.html">Biography</a>
+        <a class="naventry" href="mma-archive.html">Archive</a>
+        <a class="naventry" href="mma-news.html">News</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">&times;</button>
+        <a class="naventry" href="mma-books.html">Books</a>
+        <a class="naventry" href="mma-writing.html">Writing</a>
+        <a class="naventry" href="mma-exhibitions.html">Exhibitions</a>
+        <a class="naventry" href="mma-biography.html">Biography</a>
+        <a class="naventry" href="mma-archive.html">Archive</a>
+        <a class="naventry" href="mma-news.html">News</a>
+    </div>
+    <!-- books-->
+      <div class="gallerycontainer">
+        <div class="bookinfo">
+          <img src="images/exhibitions/2025_TPBBPoster.png">
+          <div class="booktext">
+            <h2>Through Padlocks, Behind Barricades</h2>
+            <h3>Interference Archive, October 2025 - January 2026</h3>
+            <p>Interference Archive and the Margaret Morton Archive produced the following programming during the exhibition's run:</p>
+            <ul>
+              <li><i>Artists on Squatting:</i> A Conversation Between Fly, Ash Thayer, and Seth Tobocman (November 11, 2025 – Moderated by Amy Starecheski)</li>
+              <li><i>Archives, Displacement and the Struggle for Housing Rights</i>: Lynn Lewis, Maggie Schreiner, and Cynthia Tobar (November 18th, 2025 – Moderated by Stephanie Neel)</li>
+              <li>Film Screening: <i>Survival Without Rent</i> and <i>Viva Loisaida!</i><br>Q&A with filmmakers Katie Heiserman and Elana Meyers (December 02, 2025 — Moderated by Justin Mugits)</li>
+              <li><i>Fragile Dwelling</i>: Margaret Morton's documentation of New York's homeless communities<br>A talk by Bonnie Yochelson (January 03, 2026)</li>
+            </ul>
+            <p>Special thanks to the following institutional archives and their staff, who helped us locate archival materials and facilitated their reproduction: Centro, the Center for Puerto Rican Studies, Hunter College; the Rare Book and Manuscript Library, Columbia University; and Tamiment Library and Robert F. Wagner Archives, New York University Special Collections.</p>
+          </div>
+        </div>
+        <div class="imgscroll">
+          <div class="imgitem">
+            <img data-caption="" src="images/ExhIA/IA_00.webp">
+          </div>
+          <div class="imgitem">
+            <img data-caption="" src="images/ExhIA/IA_01.webp">
+          </div>
+        </div>
+      </div>
+    <!--modal-->
+      <div id="mm-modal" class="mm-modal" aria-hidden="true" role="dialog">
+        <button class="mm-prev" aria-label="Previous" hidden>‹</button>
+        <button class="mm-next" aria-label="Next" hidden>›</button>
+        <button class="close" aria-label="Close">&times;</button>
+        <div class="mm-image-wrap">
+          <img src="" alt="">
+          <div class="mm-caption" hidden></div>
+        </div>
+      </div>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
