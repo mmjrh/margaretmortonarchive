@@ -11,8 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title: 'On This Spot: Margaret Morton',
       date: 'Upcoming',
       body: [
-        'A feature on Margaret Morton in the On This Spot NYC series.',
-        'Use this section for summary text, project notes, or any related context you want visitors to read after selecting this card.'
+        'Through short-form documentaries with a biographical and feminist lens, On This Spot re-centers women artists in the story of New York City’s art histories. '
       ],
       images: [
         {
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       ],
       cta: {
-        label: 'Watch on On This Spot NYC',
+        label: 'Watch the episode on Margaret Morton here.',
         href: 'https://www.onthisspotnyc.org/#videos'
       }
     },
@@ -31,8 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title: 'Through Padlocks, Behind Barricades',
       date: 'October 17, 2025 - January 05, 2026',
       body: [
-        'An exhibition featuring Margaret Morton\'s work on Glass House and the squats of the Lower East Side.',
-        'Replace this copy with full exhibition context, venue details, and program information.'
+        'Through Padlocks, Behind Barricades explores the squatter movement on New York’s Lower East Side (Loisaida) in the 1990s. It features Margaret Morton’s photographs of life in Glass House, an abandoned glass factory at the corner of Avenue D and East 10th Street. Several dozen squatters made the building their home for sixteen months, until police evicted them in winter 1994. The exhibition presents Morton’s in-depth portrait of one squat, with an array of printed materials exploring the debates that arose over squatters’ rights.'
       ],
       images: [
         {
@@ -40,7 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
           alt: 'Through Padlocks exhibition image',
           caption: 'Exhibition graphic'
         }
-      ]
+      ],
+      cta: {
+        label: 'See exhibition installation images and program information here.',
+        href: 'exh-IA.html'
+      }
     },
     'camera-donation': {
       kicker: 'Archive Donation',
