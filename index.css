@@ -292,7 +292,7 @@
   }
 
   .books .contentrow{
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 4vh;
   }
 
@@ -337,6 +337,7 @@
 
   .contentheader{
     padding-left:14vw;
+    padding-bottom:1vh;
   }
 
   .contentheader h1{
@@ -410,7 +411,7 @@
   .bookinfo{
     display: grid;
     grid-template-rows: 1fr 1fr;
-    align-items: center;
+    align-items: c;
     max-width: 30vw;
     height: 92vh;
     padding-left: 3vw;
