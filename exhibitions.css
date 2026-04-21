@@ -242,6 +242,131 @@
     gap: 2vh; /*between years*/
   }
 
+  .biocontent {
+    display: flex;
+    padding: 10vh 4vw;
+    gap: 4.5rem;
+    flex: 1 0 0;
+  }
+
+  .biocontent h1{
+    color: var(--lighttext-color);
+    font-family: CormorantGaramond;
+    font-size: 1.2rem;
+    font-weight: 450;
+    margin:0;
+    text-align: left;
+  }
+
+  .biocontent h2{
+    color: var(--lighttext-color);
+    font-family: CormorantGaramond;
+    font-size: 1rem;
+    font-weight: 450;
+    margin:0;
+  }
+
+  .biocontent h3{
+    color: var(--lighttext-color);
+    font-family: CormorantGaramond;
+    font-size: .85rem;
+    font-weight: 350;
+    margin:0;
+  }
+
+  .biocontent p{
+    margin: 0;
+    font-family: IBMPlexSans;
+    color: var(--mediumtext-color);
+    font-size: .725rem;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+
+  .leftsectiontitle{
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+
+  .staffcontainer{ /*left half of bio page*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vh 3vw;
+    align-items: start;
+    align-self: stretch;
+    width: 50vw;
+    flex-shrink: 0;
+  }
+
+  .staffcontainer > h1 {
+    grid-column: 1 / -1;
+    margin: 0;
+  }
+
+  .portraitgrid{ /*staff subpage of container (left)*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw 4vh;
+  }
+
+  .bios {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .staffportrait{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width:12vw;
+    gap: 1vh;
+  }
+
+  .staffportrait img{
+    height: auto;
+    max-width: 12vw;
+    display: block;
+    margin:0;
+  }
+
+  .staffnames {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    margin:0;
+  }
+
+  .officecontainer{ /*right half of bio page*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    flex: 1 0 0;
+    max-width:40vw;
+  }
+
+  .officephotos {
+    display: flex;
+    max-width: 40vw;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1rem;
+  }
+
+  .officephotos img{
+    height: 20vh;
+    width:auto;
+    display: block;
+  }
+
+  .contact{
+    
+  }
+
   .contentrow{ /*each row*/
     display: flex;
     align-items: flex-start; /*aligns text to top of each adjacent image*/
@@ -305,7 +430,7 @@
     flex: 1;
     max-width:40vw;
   }
-
+  
   .exhentry { /*gap between exhibition years*/
     padding:0 0 1.5vh 0;
   }
@@ -338,6 +463,33 @@
 
   .articlecontainer{
     width:26vw;
+  }
+
+  .profilecontainer{
+    width:16vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:2vh;
+  }
+
+  .archivestaff{
+    width:14vw;
+    padding: 1vh 0 1.5vh 0;
+  }
+
+  .archivespace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .archivespace img{
+    height: 30vh;
+    width:auto;
+    padding:0;
+    column-gap: 0;
   }
 
 
