@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // optional: only on narrow viewports
         // if (window.innerWidth > 479) return;
 
-        // if we’re already at the last image you might want to loop or do
+        // if we're already at the last image you might want to loop or do
         // nothing; navigate() already guards out‑of‑range.
         navigate(1);
     });

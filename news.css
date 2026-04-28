@@ -225,6 +225,23 @@
       cursor: pointer;
   }
 
+    /* mobile‑only adjustments for homepage + nav*/
+  @media (max-width: 479px) {
+      .navbar { display: none; }    /* hide desktop links */
+      .hamburger { display: block; }/* show the button */
+      .homebutton a {
+        font-size: 1.4rem;
+        align-items:center;
+        padding-left:3vw;
+      }
+      .homepage {
+        min-height: 90vh;    /* ensure mobile view also takes full height */
+      }
+      .landingimg{
+        max-width:90vw;
+        padding:5px;
+      }
+  }
 
   h2{ /*book title on book page*/
     color: var(--lighttext-color);
