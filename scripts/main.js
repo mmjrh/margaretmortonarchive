@@ -254,4 +254,30 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       });
   })();
+
+/* Book gallery switching on title click */
+document.addEventListener('DOMContentLoaded', () => {
+  const bookTitles = document.querySelectorAll('.book-title');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  bookTitles.forEach(title => {
+    title.addEventListener('click', () => {
+      // Get the book identifier from the parent contentrow's data-book attribute
+      const bookId = title.closest('.contentrow')?.getAttribute('data-book');
+      
+      if (!bookId) return;
+
+      // Hide all galleries
+      galleryItems.forEach(item => {
+        item.classList.remove('active');
+      });
+
+      // Show the selected gallery
+      const selectedGallery = document.querySelector(`.gallery-item[data-book="${bookId}"]`);
+      if (selectedGallery) {
+        selectedGallery.classList.add('active');
+      }
+    });
+  });
+});
         
