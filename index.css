@@ -1,9 +1,9 @@
 /*general*/
   :root {
     background-color: #fffff2;
-    font-size:16.5px;
-    --lighttext-color: #74570e;
-    --mediumtext-color:#888152;
+    font-size:18px;
+    --lighttext-color: #634a0c;
+    --mediumtext-color:#7c764b;
     --dimtext-color:  #bcbca7;
     --softhighlight: #efefdf;
     --background-color:#fffff2;
@@ -32,7 +32,7 @@
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0rem;      /* initial separation from preceding content */
+    top: .75vh;      /* initial separation from preceding content */
     background: linear-gradient(
         to bottom,
         var(--background-color) 0%,          /* solid at the top */
@@ -234,7 +234,7 @@
   p { /*book description*/
     font-family: IBMPlexSans;
     color: var(--mediumtext-color);
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: 100;
   }
 
@@ -253,7 +253,7 @@
   }
   
   a{
-    background-color: var(--softhighlight);
+    background-color: transparent;
     text-decoration: none;
     color: var(--lighttext-color);
   }
@@ -273,7 +273,17 @@
   }
 
 /*books, writings, exhibitions*/
-  .maincontent { /*outermost container*/
+  .books{ /*section styling creates vertical split*/
+    display: flex;
+    flex-direction: row;
+  }
+
+  .exhibitions{ /*section styling creates vertical split*/
+    display: flex;
+    flex-direction: row;
+  }
+
+  .maincontent { /*outermost container used for writing page*/
     display: flex;
     flex-direction: row;
   }
@@ -323,6 +333,8 @@
 
   .contentright {
     align-self: flex-start;
+    position:sticky;
+    top:7.5vh;
   }
 
   .gallerycontainer {
