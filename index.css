@@ -389,6 +389,21 @@
     align-items: flex-end; /* keeps the group right-aligned in the scroll container */
     gap: 0.5vh;
   }
+  .books figure {
+    margin: 0;          /* remove browser default side margins */
+    display: inline-block;
+    width: 100%;
+  }
+  .books figcaption {
+    font-size: 0.75rem;
+    color: var(--mediumtext-color);
+    margin: 0.2rem 0 0.4rem 0 ;
+    font-family: cormorantgaramond;
+    text-align: left;
+    padding-left: 2vw;
+    white-space: pre-wrap; /* honors \n line breaks in your caption text */
+    display:none;
+  }
 
   @media (max-width: 479px) {
     .contentrow {
@@ -480,6 +495,12 @@
     .imgscroll img{
       max-width: 100%;
       padding:0 2vw;
+    }
+    .books figure{
+      display:block;
+    }
+    .books figcaption {
+      display:block;
     }
   }
 
@@ -750,6 +771,9 @@
       font-size: .9rem;
       font-weight: 100;
       max-width: 80vw;
+    }
+    .mm-modal{
+      display:none;
     }
   }
 

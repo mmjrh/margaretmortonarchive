@@ -244,14 +244,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const images = document.querySelectorAll('.imgitem img');
 
       images.forEach(img=>{
-      img.classList.add('exhibit-thumb');
-      img.addEventListener('click', function(e){
-          // group by the scroller container so navigation stays within that scroller
+        img.classList.add('exhibit-thumb');
+        img.addEventListener('click', function(e){
+          // Skip modal on mobile
+          if (window.innerWidth <= 479) return;
+          
           const container = img.closest('.imgscroll') || img.closest('.rightcolumn') || img.closest('.contentrow') || document;
           const groupList = Array.from(container.querySelectorAll('.imgitem img'));
           const startIndex = groupList.indexOf(img);
           openGroup(groupList, startIndex);
-      });
+        });
       });
   })();
 
@@ -334,3 +336,27 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
         
+/* Show data-caption as visible caption beneath each image */
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('img[data-caption]');
+
+  images.forEach(img => {
+    const caption = img.getAttribute('data-caption');
+    if (!caption) return;
+
+    // Wrap in <figure> if not already wrapped
+    if (img.parentElement.tagName !== 'FIGURE') {
+      const figure = document.createElement('figure');
+      img.parentNode.insertBefore(figure, img);
+      figure.appendChild(img);
+    }
+
+    // Add <figcaption> if not already present
+    const parent = img.parentElement;
+    if (!parent.querySelector('figcaption')) {
+      const figcaption = document.createElement('figcaption');
+      figcaption.textContent = caption;
+      parent.appendChild(figcaption);
+    }
+  });
+});
