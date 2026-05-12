@@ -259,6 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const bookTitles = document.querySelectorAll('.book-title');
   const galleryItems = document.querySelectorAll('.gallery-item');
+  const contentRight = document.querySelector('.contentright');
 
   bookTitles.forEach(title => {
     title.addEventListener('click', () => {
@@ -276,8 +277,60 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedGallery = document.querySelector(`.gallery-item[data-book="${bookId}"]`);
       if (selectedGallery) {
         selectedGallery.classList.add('active');
+        
+        // On mobile, show contentright as modal
+        if (window.innerWidth <= 479 && contentRight) {
+          contentRight.classList.add('active');
+          document.body.style.overflow = 'hidden';
+          
+          // Add close button if not already present
+          if (!document.querySelector('.close-gallery')) {
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'close-gallery';
+            closeBtn.setAttribute('aria-label', 'Close gallery');
+            closeBtn.innerHTML = '&times;';
+            closeBtn.addEventListener('click', closeGallery);
+            contentRight.appendChild(closeBtn);
+          }
+        }
       }
     });
+  });
+
+  // Close gallery function
+  function closeGallery() {
+    galleryItems.forEach(item => {
+      item.classList.remove('active');
+    });
+    
+    if (contentRight) {
+      contentRight.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    // Remove close button
+    const closeBtn = document.querySelector('.close-gallery');
+    if (closeBtn) {
+      closeBtn.removeEventListener('click', closeGallery);
+      closeBtn.remove();
+    }
+  }
+
+  // Close modal when clicking on the backdrop (contentright itself, not the content)
+  if (contentRight) {
+    contentRight.addEventListener('click', (e) => {
+      // Only close if clicking on the contentright background, not on child elements
+      if (e.target === contentRight) {
+        closeGallery();
+      }
+    });
+  }
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && contentRight && contentRight.classList.contains('active')) {
+      closeGallery();
+    }
   });
 });
         
