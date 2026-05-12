@@ -9,6 +9,12 @@
     --background-color:#fffff2;
   }
 
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   @font-face {
       font-family: 'CormorantGaramond';
       src: url('fonts/CormorantGaramond/CormorantGaramond.ttf') format('truetype');
@@ -26,45 +32,20 @@
   nav{
     display: flex;
     width: 100%;
-    box-sizing: border-box; /*makes width inclusive of padding*/
     height: auto;
-    padding: .75vh 1vw 0.75vh 1vw; /*top, right, bottom, left*/
+    padding: 2vh 2vw 4vh 1vw; /*top, right, bottom, left*/
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: .75vh;      /* initial separation from preceding content */
+    position: fixed;
+    top: 0;      /* initial separation from preceding content */
     background: linear-gradient(
         to bottom,
         var(--background-color) 0%,          /* solid at the top */
-        var(--background-color) 80%,         /* hold colour for most of it */
+        var(--background-color) 75%,         /* hold colour for most of it */
         rgba(255,255,242,0) 100%             /* transparent at the very bottom */
     );
     z-index: 100;
   }
-
-  nav::before {
-    content: "";
-    position: absolute;
-    top: -1rem; left: 0; right: 0;
-    height: 1rem;
-    background: inherit;   /* fills the space above the bar */
-  }
-
-  .pagetitle{
-    color: var(--lighttext-color);
-    font-family: CormorantGaramond;
-    font-size: 1.4rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.03rem;
-  }
-
-  .pagetitle a{
-    color: var(--lighttext-color);
-    background-color: transparent;
-  }
-
   .navbar{
     align-self: stretch;
     justify-content: center; 
@@ -72,12 +53,10 @@
     gap: 2vw; 
     display: flex;
   }
-
   .navbar a{ /*nullifies link background color that appears elsewhere*/
     color: var(--mediumtext-color);
     background-color: transparent;
   }
-
   .naventry {
     color: var(--mediumtext-color);
     text-align: right;
@@ -87,7 +66,19 @@
     font-weight: 400;
     line-height: normal;
   }
-  
+  .pagetitle{
+    color: var(--lighttext-color);
+    font-family: CormorantGaramond;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.03rem;
+  }
+  .pagetitle a{
+    color: var(--lighttext-color);
+    background-color: transparent;
+  }  
   @media (max-width: 479px) {
     nav {
       padding: 1vh 0 2vh 0;
@@ -99,7 +90,7 @@
       display: none;               /* only visible on small screens */
       position: absolute;
       top: 1vh;
-      right: 1.5vw;
+      right: 4vw;
       width: 1.8rem;
       height: 1.8rem;
       background: transparent;
@@ -300,6 +291,7 @@
     gap: 1vh; /*space betw page title and first entry*/
   }
   .contentheader{ /*gap under page section title*/
+    padding-top: 4vh;
     padding-bottom:3vh;
   }
   .contentpad { /*div pushes content slightly to right of page title*/
@@ -441,7 +433,7 @@
       pointer-events: auto;
     }
     .gallerycontainer{
-      max-width:100vw;
+      max-width:100%;
       max-height:100vh;
       background-color: var(--background-color);
       z-index: 9999;
@@ -459,7 +451,7 @@
       display: none;
     }
     .bookinfo{
-      max-width: 100vw;
+      max-width: 100%;
       display:flex;
       flex-direction: column;
       align-items: center;
@@ -479,13 +471,13 @@
       padding:0;
     }
     .imgscroll {
-      max-width: 100vw;
+      max-width: 100%;
       height: 100vh;
       gap:1vh;
       padding:0;
     }
     .imgscroll img{
-      max-width: 100vw;
+      max-width: 100%;
       padding:0 2vw;
     }
   }
@@ -591,10 +583,10 @@
       text-underline-offset:.4rem;
     }
     .articlecontainer{
-      width:100vw;
+      width:100%;
     }
     .imggrid{
-      max-width: 100vw;
+      max-width: 100%;
     }
     .imggrid img{
       width: 42vw;
@@ -648,7 +640,7 @@
   .mm-modal img{
     width: auto;
     height: auto;
-    max-width: calc(100vw - 80px);
+    max-width: calc(100% - 80px);
     max-height: calc(100vh - 120px);
     object-fit: contain;
     display:block;
@@ -701,7 +693,7 @@
     color: var(--background-color);
     font-family:cormorantgaramond;
     white-space: pre-line; /* allows for line breaks in the caption text */
-    max-width: calc(100vw - 80px);
+    max-width: calc(100% - 80px);
     font-size: .9rem;
     box-sizing: border-box;
   }
@@ -715,7 +707,7 @@
       height:100vh;
     }
     .mm-modal img{
-      max-width: calc(100vw - 40px);
+      max-width: calc(100% - 40px);
       max-height: auto;
     }
     .mm-modal .mm-caption{
@@ -839,7 +831,7 @@
       gap: 3vh;
     }
     .righttext{
-      max-width:100vw;
+      max-width:100%;
     }
     .figures-pair{
       gap: 2vh;
@@ -921,7 +913,7 @@
   }
   .officephotos {
     display: flex;
-    max-width: 40vw;
+    max-width: 50vw;
     height: auto;
     flex-direction: row;
     align-items: center;
@@ -929,7 +921,7 @@
     gap:1rem;
   }
   .officephotos img{
-    height: 20vh;
+    height: 28vh;
     width:auto;
     display: block;
   }
@@ -938,6 +930,10 @@
     .archivecontent{
       flex-direction: column;
       padding: 5vh 3vw;
+    }
+    .archivecontent h1{
+      padding-top: 4vh;
+      font-weight: 500;
     }
     .archivecontent p{
       font-size: .65rem;
@@ -957,16 +953,32 @@
       display: flex;
       flex-direction: column;
       align-items: left;
-      max-width:42vw;
+      max-width:43.5vw;
       gap: 1vh;
     }
     .staffportrait img{
       height: auto;
-      max-width: 42vw;
+      max-width: 45vw;
       display: block;
       margin:0;
     }
-
+    .officecontainer{
+      max-width:100%;
+    }
+    .officephotos {
+      display: flex;
+      max-width: 80vw;
+      height: auto;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap:1rem;
+    }
+    .officephotos img{
+      display: flex;
+      width:90vw;
+      height:auto;
+    }
   }
 
 /*Image Modal*/
@@ -1002,7 +1014,7 @@
   .mm-modal img{
     width: auto;
     height: auto;
-    max-width: calc(100vw - 80px);
+    max-width: calc(100% - 80px);
     max-height: calc(100vh - 120px);
     object-fit: contain;
     display:block;
@@ -1045,7 +1057,7 @@
     color: var(--background-color);
     font-family:cormorantgaramond;
     white-space: pre-line; /* allows for line breaks in the caption text */
-    max-width: calc(100vw - 80px);
+    max-width: calc(100% - 80px);
     font-size: .9rem;
     box-sizing: border-box;
   }
@@ -1058,7 +1070,7 @@
       height:100%;
     }
     .mm-modal img{
-      max-width: calc(100vw - 40px);
+      max-width: calc(100% - 40px);
       max-height: auto;
     }
     .mm-modal .mm-caption{
