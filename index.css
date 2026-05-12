@@ -7,6 +7,7 @@
     --dimtext-color:  #bcbca7;
     --softhighlight: #efefdf;
     --background-color:#fffff2;
+    --modal-background:rgba(188, 187, 178, .85);
   }
 
   *,
@@ -661,9 +662,7 @@
     }
   }
 
-
-
-/*Modal*/
+/*Image Modal*/
   .exhibit-thumb{
     cursor:pointer;
     max-width:100%;
@@ -672,7 +671,7 @@
   .mm-modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,0.85);
+    background:var(--modal-background);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -694,44 +693,33 @@
     gap:8px
   }
   .mm-modal img{
-    width: auto;
-    height: auto;
-    max-width: calc(100% - 80px);
-    max-height: calc(100vh - 120px);
-    object-fit: contain;
-    display:block;
-    box-shadow: 0 10px 30px rgba(0,0,0,.6)
+      width: auto;
+      height: auto;
+      max-width: 90vw;
+      max-height: 93vh;
+      object-fit: contain;
+      display:block;
   }
   .mm-modal .close{
     position:absolute;
-    top: 1rem;
-    right: 1rem;
-    color:var(--mediumtext-color);
+    top:18px;
+    right:18px;
+    color:var(--lighttext-color);
     font-size:2rem;
     border:none;
     background:transparent;
-    cursor:pointer;
-    z-index:10001;
-    width: 2rem;
-    height: 2rem;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
+    cursor:pointer
   }
   .mm-modal .mm-prev, .mm-modal .mm-next{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
-    color:#fff;
+    color:var(--lighttext-color);
     background:transparent;
     border:none;
     font-size:3rem;
     cursor:pointer;
-    padding:6px 12px;
-    pointer-events:none;
-  }
-  .mm-modal.open .mm-prev, .mm-modal.open .mm-next{
-    pointer-events:auto;
+    padding:6px 12px
   }
   .mm-modal .mm-prev{
     left:8px
@@ -743,10 +731,10 @@
     position:relative;
     display:flex;
     flex-direction:column;
-  } 
-  .mm-modal .mm-caption{ /* place caption below the image, aligned to its bottom left */
-    margin-top: 1vh;
-    color: var(--background-color);
+  }
+  .mm-modal .mm-caption{
+    margin-top: 0;
+    color: var(--lighttext-color);
     font-family:cormorantgaramond;
     white-space: pre-line; /* allows for line breaks in the caption text */
     max-width: calc(100% - 80px);
@@ -755,26 +743,6 @@
   }
   .mm-modal .mm-caption[hidden]{
     display:none
-  }
-
-  @media (max-width: 479px) {
-    .mm-modal .mm-image-wrap{
-      padding:10px;
-      height:100vh;
-    }
-    .mm-modal img{
-      max-width: calc(100% - 40px);
-      max-height: auto;
-    }
-    .mm-modal .mm-caption{
-      color: var(--background-color);
-      font-size: .9rem;
-      font-weight: 100;
-      max-width: 80vw;
-    }
-    .mm-modal{
-      display:none;
-    }
   }
 
 /*MM bio page*/
@@ -1037,106 +1005,6 @@
       display: flex;
       width:90vw;
       height:auto;
-    }
-  }
-
-/*Image Modal*/
-  .exhibit-thumb{
-    cursor:pointer;
-    max-width:100%;
-    height:auto
-  }
-  .mm-modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.85);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:9999;
-    opacity:0;
-    pointer-events:none;
-    transition:opacity .18s}
-  .mm-modal.open{
-    opacity:1;
-    pointer-events:auto;
-  }
-  .mm-modal .mm-image-wrap{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:center;
-    padding:20px;
-    box-sizing:border-box;
-    gap:8px
-  }
-  .mm-modal img{
-    width: auto;
-    height: auto;
-    max-width: calc(100% - 80px);
-    max-height: calc(100vh - 120px);
-    object-fit: contain;
-    display:block;
-    box-shadow: 0 10px 30px rgba(0,0,0,.6)
-  }
-  .mm-modal .close{
-    position:absolute;
-    top:18px;
-    right:18px;
-    color:var(--background-color);
-    font-size:2rem;
-    border:none;
-    background:transparent;
-    cursor:pointer
-  }
-  .mm-modal .mm-prev, .mm-modal .mm-next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    color:var(--background-color);
-    background:transparent;
-    border:none;
-    font-size:3rem;
-    cursor:pointer;
-    padding:6px 12px
-  }
-  .mm-modal .mm-prev{
-    left:8px
-  }
-  .mm-modal .mm-next{
-    right:8px
-  }
-  .mm-image-wrap{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-  }
-  .mm-modal .mm-caption{
-    margin-top: 0;
-    color: var(--background-color);
-    font-family:cormorantgaramond;
-    white-space: pre-line; /* allows for line breaks in the caption text */
-    max-width: calc(100% - 80px);
-    font-size: .9rem;
-    box-sizing: border-box;
-  }
-  .mm-modal .mm-caption[hidden]{
-    display:none
-  }
-  @media (max-width: 479px) {
-    .mm-modal .mm-image-wrap{
-      padding:10px;
-      height:100%;
-    }
-    .mm-modal img{
-      max-width: calc(100% - 40px);
-      max-height: auto;
-    }
-    .mm-modal .mm-caption{
-      color: var(--background-color);
-      font-size: .9rem;
-      font-weight: 100;
-      max-width: 80vw;
     }
   }
 
