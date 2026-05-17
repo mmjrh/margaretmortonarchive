@@ -6,12 +6,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Edit this object to update right-side content for each news entry.
   const newsPanelContent = {
+    'mana-open-studios': {
+      kicker: 'Event',
+      title: 'Mana Contemporary Fall Open Studios',
+      date: 'May 17, 2026',
+      body: [
+        'We are opening our doors to the public for Mana Open Studios on Sunday, May 17.',
+        'Margaret Morton’s books will be for sale and audiovisual materials on view to browse.',
+      ],
+      images: [
+        {
+          src: 'images/news/OpenStudios.png',
+          alt: 'Open Studios image',
+          caption: 'Fall Open Studios'
+        }
+      ],
+      cta: {
+        label: 'Register here',
+        href: 'https://www.eventbrite.com/e/spring-open-studios-at-mana-contemporary-tickets-1984307241375',
+      }
+    },
     'on-this-spot': {
       kicker: 'Podcast',
       title: 'On This Spot: Margaret Morton',
       date: 'Upcoming',
       body: [
-        'Through short-form documentaries with a biographical and feminist lens, On This Spot re-centers women artists in the story of New York City’s art histories. '
+        'Through short-form documentaries with a biographical and feminist lens, On This Spot re-centers women artists in the story of New York City’s art histories.',
+        'Link and events forthcoming.',
       ],
       images: [
         {
@@ -20,10 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
           caption: 'On This Spot NYC feature'
         }
       ],
-      cta: {
-        label: 'Watch the episode on Margaret Morton here.',
-        href: 'https://www.onthisspotnyc.org/#videos'
-      }
     },
     'through-padlocks': {
       kicker: 'Exhibition',
@@ -47,10 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
     'camera-donation': {
       kicker: 'Archive Donation',
       title: 'Archive Donates Cameras to the Cooper Union',
-      date: 'December xx, 2025',
+      date: 'December 2025',
       body: [
-        'The Margaret Morton Archive donates her cameras to the Cooper Union.',
-        'Use this area for donation details, institutional context, and acknowledgements.'
+        'The Margaret Morton Archive donates her photographic equipment to the Cooper Union, where Morton taught for 30 years, including a Mamiya 6, Canon EOS 5D, and several 35mm cameras.',
       ],
       images: [
         {
@@ -65,8 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title: 'Cooper Union Receives Teaching Papers',
       date: 'March 15, 2024',
       body: [
-        'The Cooper Union receives Margaret Morton\'s teaching papers.',
-        'Add paper highlights, collection scope, and access details in this section.'
+        'Recently, The Cooper Union received 16 boxes of Margaret Morton\'s teaching papers.'
       ],
       images: [
         {
@@ -74,7 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
           alt: 'Teaching papers donation image',
           caption: 'Teaching papers donation'
         }
-      ]
+      ],
+      cta: {
+        label: 'See the contents of this collection and inquire for research here.',
+        href: 'https://archives.cooper.edu/repositories/2/resources/78'
+      }
     },
     'curtis-cuffie': {
       kicker: 'Exhibition',
@@ -89,22 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
           src: 'images/news/Curtis.png',
           alt: 'Curtis Cuffie feature image',
           caption: 'Morton\'s Lens on Curtis Cuffie'
-        }
-      ]
-    },
-    'mana-open-studios': {
-      kicker: 'Event',
-      title: 'Mana Contemporary Fall Open Studios',
-      date: 'October 15, 2023',
-      body: [
-        'Event coverage and visitor information for Mana Contemporary Fall Open Studios.',
-        'Use this section for recap details, participating artists, and related links.'
-      ],
-      images: [
-        {
-          src: 'images/news/OpenStudios.png',
-          alt: 'Open Studios image',
-          caption: 'Fall Open Studios'
         }
       ]
     }
