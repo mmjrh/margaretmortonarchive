@@ -58,12 +58,8 @@
     color: var(--mediumtext-color);
   }
   .navbar a:hover{
-
+    color: var(--lighttext-color);
     background-color: transparent;
-  }
-  .navbar a:visited{
-    
-
   }
   .naventry {
     color: var(--mediumtext-color);
@@ -330,11 +326,11 @@
     position:sticky;
     top:7.5vh;
   }
-  .gallerycontainer {
+  .gallerycontainer { /*contains imgscroll*/
     display: flex;
     align-items: flex-start;
     flex: 1;
-    max-width:50vw;
+    max-width:45vw;
   }
   .gallery-item {
     display: none;
@@ -363,9 +359,9 @@
   }
   .bookinfo{
     display: grid;
-    padding:8vh 0;
+    margin:8vh 0 4vh 0;
     grid-template-columns: 2fr 4fr;
-    gap:1.5vw;
+    gap:1vw;
     max-width: 100%;
     box-sizing: border-box;
   }
@@ -374,23 +370,27 @@
     width: 100%;
     box-sizing: border-box;
   }
+  .bookinfo p{
+    font-size: .8rem;
+  }
   .booktext{
     align-self:start;
-    padding: 0 5vw 0 0 ;
+    padding: 0 2vw 0 0;
   }
   .imgscroll {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    height: calc(100vh - 8vh); /* fill remaining viewport space after navbar, preventing page scroll */
+    height: calc(100vh - 2vh);
     align-items:flex-start;
     gap: 2vh;
     flex:1;
+    padding-top:6vh;
   }
   .imgscroll img{
     height: auto;
     align-items: right;
-    max-width: 45vw;
+    max-width: 40vw;
     padding-right:1vw;
     box-sizing: border-box;
   }
@@ -398,7 +398,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end; /* keeps the group right-aligned in the scroll container */
-    gap: 0.5vh;)
+    gap: 0.5vh;
   }
   .books figure {
     margin: 0;          /* remove browser default side margins */
@@ -732,7 +732,7 @@
   .mm-modal img{
       width: auto;
       height: auto;
-      max-width: 90vw;
+      max-width: 70vw;
       max-height: 93vh;
       object-fit: contain;
       display:block;
@@ -1443,117 +1443,5 @@
     }
     .news-detail-body a {
       font-size: 0.7rem;
-    }
-  }
-
-/*Modal*/
-  .exhibit-thumb{
-    cursor:pointer;
-    max-width:100%;
-    height:auto
-  }
-
-  .mm-modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.85);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:9999;
-    opacity:0;
-    pointer-events:none;
-    transition:opacity .18s}
-
-  .mm-modal.open{
-    opacity:1;
-    pointer-events:auto;
-  }
-
-  .mm-modal .mm-image-wrap{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    justify-content:center;
-    padding:20px;
-    box-sizing:border-box;
-    gap:8px
-  }
-
-  .mm-modal img{
-    width: auto;
-    height: auto;
-    max-width: calc(100vw - 80px);
-    max-height: calc(100vh - 120px);
-    object-fit: contain;
-    display:block;
-    box-shadow: 0 10px 30px rgba(0,0,0,.6)
-  }
-
-  .mm-modal .close{
-    position:absolute;
-    top:18px;
-    right:18px;
-    color:var(--mediumtext-color);
-    font-size:2rem;
-    border:none;
-    background:transparent;
-    cursor:pointer
-  }
-
-  .mm-modal .mm-prev, .mm-modal .mm-next{
-    position:absolute;
-    top:50%;
-    transform:translateY(-50%);
-    color:#fff;
-    background:transparent;
-    border:none;
-    font-size:3rem;
-    cursor:pointer;
-    padding:6px 12px
-  }
-  
-  .mm-modal .mm-prev{
-    left:8px
-  }
-  .mm-modal .mm-next{
-    right:8px
-  }
-
-  .mm-image-wrap{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-  }
-
-  /* place caption below the image, aligned to its bottom left */
-  .mm-modal .mm-caption{
-    margin-top: 0;
-    color: var(--mediumtext-color);
-    font-family:cormorantgaramond;
-    white-space: pre-line; /* allows for line breaks in the caption text */
-    max-width: calc(100vw - 80px);
-    font-size: .9rem;
-    box-sizing: border-box;
-  }
-
-  .mm-modal .mm-caption[hidden]{
-    display:none
-  }
-
-  @media (max-width: 479px) {
-    .mm-modal .mm-image-wrap{
-      padding:10px;
-      height:100%;
-    }
-    .mm-modal img{
-      max-width: calc(100vw - 40px);
-      max-height: auto;
-    }
-    .mm-modal .mm-caption{
-      color: var(--background-color);
-      font-size: .9rem;
-      font-weight: 100;
-      max-width: 80vw;
     }
   }
