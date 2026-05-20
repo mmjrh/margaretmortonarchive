@@ -310,9 +310,14 @@
     align-items: flex-start; /*aligns text to top of each adjacent image*/
     gap: 3vw;
   }
-  .leftcolumn img{ /*images within covers column*/
-    height: auto;
-    max-width: 9vw;
+  .leftcolumn { /*ensures rightcolumn is aligned properly*/
+    width: 4ch;        /* exactly 4 characters wide in the current font */
+    flex-shrink: 0;    /* prevent it from compressing */
+    min-width: 4ch;    /* belt and suspenders */
+  }
+  .leftcolumn h2 { /*properly aligns year and exh/book*/
+    margin: 0;
+    line-height: 1;   /* removes any line-height-induced offset */
   }
   .rightcolumn { /*within left side of page adjacent to year (NOT IMG SCROLL)*/
     display: flex;
@@ -351,6 +356,7 @@
   }
   .book-title span {
     background-color: var(--softhighlight);
+    
   }
   .book-title span:hover {
     opacity: 0.7;
@@ -470,13 +476,6 @@
     .exhibitions{ /*causes popup to appear below instead of to right*/
       flex-direction: column;
     }
-    .books .contentrow{
-      margin-bottom: 0;
-      align-items: flex-start;
-    }
-    .books .contentrow p{
-      display: none;
-    }
     .bookinfo{
       max-width: 100%;
       display:flex;
@@ -520,7 +519,7 @@
     display: flex;
     flex-direction: row;
   }
-  .exhibitions .rightcolumn{ /*between shows in a given year*/
+  .exhibitions .rightcolumn{ /*row gap between shows in a given year*/
     gap: 1.5vh;
   }
   .ephgrid2{ /*exhibitions ephemera layouts*/
