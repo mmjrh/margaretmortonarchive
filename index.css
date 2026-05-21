@@ -1212,13 +1212,14 @@
   }
   .news-detail-date {
     font-size: 0.78rem;
+    margin-top: .5rem;
   }
   .news-detail-body p {
     font-size: 0.84rem;
     line-height: 1.5;
   }
   .news-detail-cta {
-    margin: 0;
+    margin-top: .5rem;
   }
   .news-detail-cta a {
     font-family: CormorantGaramond;
