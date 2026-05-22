@@ -579,7 +579,7 @@
   .exhibitions .imgscroll p{
     white-space: pre-line;
     font-family:cormorantgaramond;
-    font-size:.85rem;
+    font-size:1rem;
     color: var(--lighttext-color);
     max-width:95%;
     margin:1rem;
