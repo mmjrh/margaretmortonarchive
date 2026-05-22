@@ -522,34 +522,53 @@
   .exhibitions .rightcolumn{ /*row gap between shows in a given year*/
     gap: 1.5vh;
   }
+  .exhibitions .contentright{
+    position:fixed;
+    right:0;
+    padding-right:2vw;
+    box-sizing: border-box;
+    max-width:40vw;
+  }
+  .exhinfo {
+    border-left: 1px dotted var(--lighttext-color);
+    margin-left: 0.5rem;
+  }
   .ephgrid2{ /*exhibitions ephemera layouts*/
+    padding-top:.5rem;
+    padding-bottom: 1.5rem;
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0;
-    max-width: 45vw;
+    row-gap:1rem;
+    width: 100%;
   }
   .ephgrid2 img{
-    max-width:18vw;
-    height:auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin:0;
   }
   .ephgrid4{
+    padding-top:.5rem;
+    padding-bottom: 1.5rem;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 0vw;
-    max-width: 45vw;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    row-gap:1rem;
+    width: 100%;
   }
   .ephgrid4 img{
-    max-width: 9vw;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin:0;
-    height:auto;
-  }
-  .exhibitions{
-    overflow-y:hidden;
   }
   .exhibitions .imgscroll{
     padding-top:6vh;
     box-sizing: border-box;
+    padding-bottom:10vh;
   }
   .exhibitions .imgscroll > :nth-child(n+2){
     row-gap:6vh;
@@ -568,26 +587,31 @@
     text-underline-offset: .5rem;
   }
   @media (max-width: 479px) {
+  .exhibitions .contentright{
+      max-width:100%;
+    }
   .ephgrid2{ /*exhibitions ephemera layouts*/
     display:grid;
     grid-template-columns: 1fr;
-    gap: 1vw;
+    gap: 1rem;
     max-width: 100vw;
   }
   .ephgrid2 img{
     max-width:100%;
     height:auto;
+    padding: 0 1rem;
   }
   .ephgrid4{
     display:grid;
     grid-template-columns: 1fr;
-    gap: 0vw;
+    gap: 1rem;
     max-width: 100%;
   }
   .ephgrid4 img{
     max-width: 100%;
     margin:0;
     height:auto;
+    padding: 0 1rem;
   }
   .exhibitions .gallerycontainer{
     height:100vh;
