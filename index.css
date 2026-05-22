@@ -483,6 +483,9 @@
       align-items: center;
       padding: 5vh 5vw 0 5vw;
     }
+    .bookinfo p{
+      font-size: .7rem;
+  }
     .bookcover {
       display: flex;
       justify-content: center;
