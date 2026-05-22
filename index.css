@@ -558,7 +558,7 @@
     display:grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0;
-    row-gap:1rem;
+    row-gap:.5rem;
     width: 100%;
   }
   .ephgrid4 img{
@@ -897,7 +897,7 @@
   }
   @media (max-width: 479px) {
     .biocontainer{
-      padding: 5vh 3vw;
+      padding: 8vh 3vw;
     }
     .biography .contentheader {
       padding: 2vh 0 0 0;
