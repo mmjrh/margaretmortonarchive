@@ -54,7 +54,7 @@
     gap: 2vw; 
     display: flex;
   }
-  .navbar a{ /*nullifies link background color that appears elsewhere*/
+  .naventry:link{ /*nullifies link background color that appears elsewhere*/
     color: var(--mediumtext-color);
   }
   .navbar a:hover{
@@ -816,7 +816,7 @@
     padding-top:10vh;
   }
   .biocontainer > :nth-child(n+2) {
-    margin-top: 6vh;  /* gap between 3rd+ items only */
+    margin-top: 4vh;  /* gap between 3rd+ items only */
   }
   .figure{ /*each figure container,incl. image/caption*/
     margin:0;
@@ -844,11 +844,12 @@
     line-height: normal;
     color: var(--mediumtext-color);
     align-self:stretch;
+    max-width:inherit;
   }
   .centeredtext{
     display: flex;
     flex-direction: column;
-    padding: 0 33vw;
+    padding: 0 37vw;
     justify-content: center;
     align-items: flex-start;
     align-self: stretch;
@@ -869,24 +870,24 @@
   }
   .figures-row3{ /*apartment pic layout*/
     display: flex;
-    flex-direction: row;
-    max-width: 60vw;
-    column-gap: 4vw;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    max-width: 65vw;
+    gap: 2vh;
   }
   .figures-row3 img{
-    max-height:50vh;
+    max-height:38vh;
   }
   .figures-row2 img{
     max-height:30vh;
   }
   .righttext{
-    max-width: 27vw;
+    max-width: 33vw;
   }
   .figures-pair{ /*container for pairs within a row, separated from another image*/
     display: flex;
     flex-direction: row;
-    gap: 0.5vh;
+    gap: 1.5vh;
   }
   .figures-pair img{
     display: block;
@@ -898,6 +899,9 @@
   @media (max-width: 479px) {
     .biocontainer{
       padding: 8vh 3vw;
+    }
+    .figcaption{
+      max-width:70vw;
     }
     .biography .contentheader {
       padding: 2vh 0 0 0;
@@ -915,16 +919,23 @@
       column-gap: .5vw;
       align-items: flex-start;
     }
-    .figures-row2{
+    .figures-pair{
       flex-direction: column;
-      max-width: 100%;
-      gap: 3vh;
+      gap: 2vh;
+    }
+    .figures-pair img{
+      max-width:65vw;
+      max-height:30vh;
     }
     .figures-row3{
       flex-direction: column;
       max-width: 100%;
       align-items:center;
       gap: 3vh;
+    }
+    .figures-row3 img{
+      max-width: 70vw;
+      max-height: 40vh;
     }
     .righttext{
       max-width:100%;
@@ -959,17 +970,18 @@
     margin: 0;
     font-family: IBMPlexSans;
     color: var(--mediumtext-color);
-    font-size: .725rem;
+    font-size: .85rem;
     font-weight: 100;
     line-height: 1.4;
   }
   .staffcontainer{ /*left half of staffbio page*/
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2vh 3vw;
-    align-items: start;
+    gap: 2vh 0;
+    justify-items: flex-start;
+    align-content:flex-start;
     align-self: stretch;
-    width: 50vw;
+    width: 53vw;
     flex-shrink: 0;
   }
   .staffcontainer > h1 {
@@ -979,7 +991,7 @@
   .portraitgrid{ /*staff subpage of container (left)*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2vw 4vh;
+    gap: 2vh 1vw;
   }
   .staffportrait{
     display: flex;
@@ -990,7 +1002,7 @@
   }
   .staffportrait img{
     height: auto;
-    max-width: 12vw;
+    max-width: 10vw;
     display: block;
     margin:0;
   }
@@ -1003,21 +1015,27 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2vh;
+    gap: 4vh;
     flex: 1 0 0;
-    max-width:40vw;
+    max-width:38vw;
+  }
+  .officepara{ /*space between h1 and content on right side of page*/
+    display:flex;
+    flex-direction: column;
+    row-gap:1vh;
   }
   .officephotos {
     display: flex;
-    max-width: 50vw;
+    max-width: 35vw;
     height: auto;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    gap:1rem;
+    gap:1vw;
+    margin-top:1vh;
   }
   .officephotos img{
-    height: 28vh;
+    height: 25vh;
     width:auto;
     display: block;
   }

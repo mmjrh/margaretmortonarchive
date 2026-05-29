@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const newsPanelContent = {
     'mana-open-studios': {
       kicker: 'Event',
-      title: 'Mana Contemporary Fall Open Studios',
+      title: 'Mana Contemporary Spring Open Studios',
       date: 'May 17, 2026',
       body: [
         'We are opening our doors to the public for Mana Open Studios on Sunday, May 17.',
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     'on-this-spot': {
-      kicker: 'Podcast',
+      kicker: 'Feature',
       title: 'On This Spot: Margaret Morton',
       date: 'Upcoming',
       body: [
@@ -57,8 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       ],
       cta: {
-        label: 'See exhibition installation images and program information here.',
-        href: 'exh-IA.html'
+        label: 'See installation images and program information on the exhibitions page.',
+        href: 'mma-exhibitions.html'
       }
     },
     'camera-donation': {

@@ -2,13 +2,13 @@
 document.getElementById('nav-placeholder').innerHTML = `
   <nav>
       <div class="homebutton">
-        <a class="pagetitle" href="index.html">Margaret Morton</a></div>
+        <a class="pagetitle" href="index.html">Margaret Morton Archive</a></div>
       </div>
       <div class="navbar">
-        <a class="naventry" href="mma-books.html">Books</a>
-        <a class="naventry" href="mma-writing.html">Writing</a>
-        <a class="naventry" href="mma-exhibitions.html">Exhibitions</a>
         <a class="naventry" href="mma-biography.html">Biography</a>
+        <a class="naventry" href="mma-books.html">Books</a>
+        <a class="naventry" href="mma-exhibitions.html">Exhibitions</a>
+        <a class="naventry" href="mma-writing.html">Writing</a>
         <a class="naventry" href="mma-archive.html">Archive</a>
         <a class="naventry" href="mma-news.html">News</a>
       </div>
