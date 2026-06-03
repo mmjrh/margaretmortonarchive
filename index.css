@@ -833,8 +833,11 @@
     align-items:center;
     padding-top:10vh;
   }
-  .biocontainer > :nth-child(n+2) {
+  .biocontainer > :nth-child(n+1) {
     margin-top: 4vh;  /* gap between 3rd+ items only */
+  }
+  .biography .contentheader{
+    text-align:center;
   }
   .figure{ /*each figure container,incl. image/caption*/
     margin:0;
@@ -849,7 +852,7 @@
   .figure img { /*image styling for bio page*/
     display: block;
     width: 100%;
-    max-height: 50vh;
+    max-height: 70vh;
     object-fit: contain; /* ensure it fits without distortion */
   }
   .figcaption { /*img caption styling*/
@@ -872,47 +875,31 @@
     align-items: flex-start;
     align-self: stretch;
   }
-  .figures-row {/*first layout, top two images*/
-    display: flex;
-    max-width: 50vw;
-    column-gap: .5vw;
-  }
-  .figures-row img{
-    max-height:30vh;
-  }
-  .figures-row2 {/*second row layout*/
-    display: flex;
-    max-width: 60vw;
-    column-gap: 5vw;
-    align-items: center;
-  }
   .figures-row3{ /*apartment pic layout*/
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 65vw;
     gap: 2vh;
+    --figures-row3-img-max-height: 45vh;
+    --figures-row3-img-portrait-max-height: 65vh;
   }
   .figures-row3 img{
-    max-height:38vh;
+    max-height: var(--figures-row3-img-max-height);
+    height: auto;
+    width: auto;
   }
-  .figures-row2 img{
-    max-height:30vh;
+  .figures-row3 img.portrait {
+    max-height: var(--figures-row3-img-portrait-max-height);
   }
   .righttext{
-    max-width: 33vw;
+    max-width: 30vw;
+    margin: 5vh 0;
   }
   .figures-pair{ /*container for pairs within a row, separated from another image*/
     display: flex;
     flex-direction: row;
-    gap: 1.5vh;
-  }
-  .figures-pair img{
-    display: block;
-    width: 100%;
-    max-height: 35vh;
-    height: auto;
-    object-fit: contain; /* ensure it fits without distortion */
+    gap: 3vh;
   }
   @media (max-width: 479px) {
     .biocontainer{
