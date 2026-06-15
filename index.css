@@ -344,6 +344,7 @@
     align-items: flex-start;
     flex: 1;
     max-width:45vw;
+    padding: 0 1vw 0 0;
   }
   .gallery-item {
     display: none;
@@ -382,7 +383,7 @@
   }
   .bookinfo img{ /*cover*/
     display: block;
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -391,8 +392,8 @@
   }
   .bookinfo p{
     font-size: .9rem;
-    margin-left:  2rem;
-    margin-right: 1rem;
+    margin-left:  .75rem;
+    margin-right: .25rem;
   }
   .booktext{
     align-self:start;
@@ -406,13 +407,12 @@
     align-items:flex-start;
     gap: 2vh;
     flex:1;
-    padding-top:6vh;
+    padding:6vh 0;
   }
   .imgscroll img{
     height: auto;
     align-items: right;
     max-width: 40vw;
-    padding-right:1vw;
     box-sizing: border-box;
   }
   .imgitem{
@@ -427,14 +427,12 @@
     width: 100%;
   }
   .books figcaption {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--mediumtext-color);
-    margin: 0.2rem 0 0.4rem 0 ;
+    margin: 0.2rem 0 0 0;
     font-family: cormorantgaramond;
     text-align: left;
-    padding-left: 2vw;
     white-space: pre-wrap; /* honors \n line breaks in your caption text */
-    display:none;
   }
 
   @media (max-width: 479px) {
@@ -486,6 +484,7 @@
       z-index: 9999;
       flex-direction: column;
       align-items: center;
+      padding:0 0 2vh 0;
     }
     .exhibitions{ /*causes popup to appear below instead of to right*/
       flex-direction: column;
@@ -532,6 +531,7 @@
     }
     .books figcaption {
       display:block;
+      margin: 0.25rem 0 .75rem 2vw;
     }
   }
 
@@ -894,7 +894,7 @@
   }
   .righttext{
     max-width: 30vw;
-    margin: 5vh 0;
+    margin: 0 0 8vh 0;
   }
   .figures-pair{ /*container for pairs within a row, separated from another image*/
     display: flex;
@@ -944,6 +944,7 @@
     }
     .righttext{
       max-width:100%;
+      margin: 0 0 4vh 0;
     }
     .figures-pair{
       gap: 2vh;
